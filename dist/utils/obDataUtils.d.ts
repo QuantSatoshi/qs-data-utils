@@ -1,5 +1,5 @@
 import * as mongodb from 'mongodb';
-import { OrderBookSchema, OrderBookDataSchema } from "qs-typings";
+import { OrderBookSchema, OrderBookDataSchema } from 'qs-typings';
 export declare function convertObAmountToBtcNotion(ob: OrderBookSchema): void;
 export declare function searchForOb(obs: OrderBookSchema[], startIndex: number, unixTimestamp: number): {
     idx: number;

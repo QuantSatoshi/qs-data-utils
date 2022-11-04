@@ -13,10 +13,10 @@ exports.isObSame = exports.isEqual = exports.takeDepth = exports.pickSameTs = ex
 const deepEqual = require('deep-equal');
 function convertObAmountToBtcNotion(ob) {
     var _a, _b;
-    (_a = ob.bids) === null || _a === void 0 ? void 0 : _a.forEach(bid => {
+    (_a = ob.bids) === null || _a === void 0 ? void 0 : _a.forEach((bid) => {
         bid.a = bid.a / bid.r;
     });
-    (_b = ob.asks) === null || _b === void 0 ? void 0 : _b.forEach(ask => {
+    (_b = ob.asks) === null || _b === void 0 ? void 0 : _b.forEach((ask) => {
         ask.a = ask.a / ask.r;
     });
 }

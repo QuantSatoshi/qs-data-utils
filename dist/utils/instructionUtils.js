@@ -29,7 +29,7 @@ exports.convertOpCode = convertOpCode;
 // map instruction from string op to number op
 // input inst is similar structure as Inst.Instruction but with string op
 function mapInstructionsToOpCode(inst) {
-    return inst.map(instruction => {
+    return inst.map((instruction) => {
         return Object.assign(Object.assign({}, instruction), { op: convertOpCode(instruction.op) });
     });
 }
