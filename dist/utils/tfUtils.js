@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.tfToTfV2 = exports.isNumber = exports.tfArrToTfV2 = exports.numberToPairDb = exports.pairDbToNumber = exports.getMinMaxFirstLast = exports.getOHLC = exports.futurePairDbToExpPairDb = exports.getSymbolsFromPairDb = exports.getDeliveryCode = exports.getServerTime = exports.getPairNum = exports.getAmount = exports.getR = exports.getSide = exports.getTs = exports.SELL = exports.BUY = void 0;
+exports.tfV2ToTf = exports.tfToTfV2 = exports.isNumber = exports.tfArrToTfV2 = exports.numberToPairDb = exports.pairDbToNumber = exports.getMinMaxFirstLast = exports.getOHLC = exports.futurePairDbToExpPairDb = exports.getSymbolsFromPairDb = exports.getDeliveryCode = exports.getServerTime = exports.getPairNum = exports.getAmount = exports.getR = exports.getSide = exports.getTs = exports.SELL = exports.BUY = void 0;
 exports.BUY = 'buy';
 exports.SELL = 'sell';
 function getTs(doc) {
@@ -207,3 +207,17 @@ function tfToTfV2(tf, pairDb, exchange, withServerTime) {
     return ret;
 }
 exports.tfToTfV2 = tfToTfV2;
+function tfV2ToTf(tf) {
+    // const [ ts, s, r, a, c, t, code ] = doc;
+    return {
+        ts: new Date(tf[0]),
+        s: tf[1] === 0 ? 'b' : 's',
+        r: tf[2],
+        a: tf[3],
+        c: tf[4].toString(),
+        t: (tf[5] && new Date(tf[5])),
+        code: tf[6].toString(),
+        tId: 1,
+    };
+}
+exports.tfV2ToTf = tfV2ToTf;

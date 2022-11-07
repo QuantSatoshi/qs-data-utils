@@ -33,3 +33,4 @@ export declare function numberToPairDb(pairDbExchangeCode: number): {
 export declare function tfArrToTfV2(tfArr: TradeDbSchema[], pairDb?: string, exchange?: string): TradeDbSchemaV2[];
 export declare function isNumber(value: any): boolean;
 export declare function tfToTfV2(tf: TradeDbSchema, pairDb?: string, exchange?: string, withServerTime?: boolean): TradeDbSchemaV2;
+export declare function tfV2ToTf(tf: TradeDbSchemaV2): TradeDbSchema;

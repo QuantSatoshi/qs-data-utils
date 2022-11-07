@@ -222,3 +222,17 @@ export function tfToTfV2(
   }
   return ret;
 }
+
+export function tfV2ToTf(tf: TradeDbSchemaV2): TradeDbSchema {
+  // const [ ts, s, r, a, c, t, code ] = doc;
+  return {
+    ts: new Date(tf[0]),
+    s: tf[1] === 0 ? 'b' : 's',
+    r: tf[2],
+    a: tf[3],
+    c: tf[4].toString(),
+    t: (tf[5] && new Date(tf[5])) as any,
+    code: tf[6].toString(),
+    tId: 1,
+  };
+}
