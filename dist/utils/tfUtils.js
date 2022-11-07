@@ -214,9 +214,9 @@ function tfV2ToTf(tf) {
         s: tf[1] === 0 ? 'b' : 's',
         r: tf[2],
         a: tf[3],
-        c: tf[4].toString(),
+        c: (tf[4] && tf[4].toString()),
         t: (tf[5] && new Date(tf[5])),
-        code: tf[6].toString(),
+        code: (tf[6] && tf[6].toString()),
         tId: 1,
     };
 }

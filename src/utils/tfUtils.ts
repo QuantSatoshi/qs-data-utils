@@ -230,9 +230,9 @@ export function tfV2ToTf(tf: TradeDbSchemaV2): TradeDbSchema {
     s: tf[1] === 0 ? 'b' : 's',
     r: tf[2],
     a: tf[3],
-    c: tf[4].toString(),
+    c: (tf[4] && tf[4].toString()) as any,
     t: (tf[5] && new Date(tf[5])) as any,
-    code: tf[6].toString(),
+    code: (tf[6] && tf[6].toString()) as any,
     tId: 1,
   };
 }
