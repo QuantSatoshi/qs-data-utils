@@ -178,7 +178,7 @@ function numberToPairDb(pairDbExchangeCode) {
 exports.numberToPairDb = numberToPairDb;
 function tfArrToTfV2(tfArr, pairDb, exchange) {
     // const [ ts, s, r ,a , c ] = doc;
-    return tfArr.map(tf => tfToTfV2(tf, pairDb, exchange));
+    return tfArr.map((tf) => tfToTfV2(tf, pairDb, exchange));
 }
 exports.tfArrToTfV2 = tfArrToTfV2;
 function formatDelivery(delivery) {
