@@ -75,7 +75,7 @@ function pickSameTs(data1, data2) {
         i++;
         j++;
     }
-    console.log(`====length not equal before=${data1.length} ${data2.length}, after=${retA.length} ${retB.length}`);
+    console.error(`!!!pickSameTs length not equal before=${data1.length} ${data2.length}, after=${retA.length} ${retB.length}`);
     return [retA, retB];
 }
 exports.pickSameTs = pickSameTs;

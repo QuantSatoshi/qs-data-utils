@@ -1,6 +1,6 @@
 {
   "name": "qs-data-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,7 +33,8 @@
   },
   "dependencies": {
     "deep-equal": "^2.1.0",
-    "qs-typings": "^0.0.6"
+    "qs-js-utils": "^0.0.15",
+    "qs-typings": "^0.0.7"
   },
   "devDependencies": {
     "@ava/typescript": "^3.0.1",

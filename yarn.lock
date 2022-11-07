@@ -977,6 +977,11 @@ buffer@^5.6.0:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
 
+byline@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/byline/-/byline-5.0.0.tgz#741c5216468eadc457b03410118ad77de8c1ddb1"
+  integrity sha512-s6webAy+R4SR8XVuJWt2V2rGvhnrhxN+9S15GNuTK3wKPOXFF6RNc+8ug2XhH+2s4f+uudG4kUVYmYOQWL2g0Q==
+
 call-bind@^1.0.0, call-bind@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/call-bind/-/call-bind-1.0.2.tgz#b1d4e89e688119c3c9a903ad30abb2f6a919be3c"
@@ -1981,10 +1986,17 @@ punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-qs-typings@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/qs-typings/-/qs-typings-0.0.6.tgz#d09a0d4061a96ae1a78c16eae15c79b8301f83cd"
-  integrity sha512-l7u4JUvDnZBlybhpchXlpvOtm5/jNlp9pkucf7CSwnakzBTVhvvNJmljlFDs/mWqcW4fWdXU1VlTU/6VXgV/BQ==
+qs-js-utils@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.15.tgz#fb564dcb7c354a1af656e935837de149a1c6547e"
+  integrity sha512-zT/bT6F22Ecx2XCEkW7OiqTVYrDxxE/agp4kVzTGPRtgElYHdKpViib3Y4oz18yblubRCp3VGaq/9kzSlW38iA==
+  dependencies:
+    byline "^5.0.0"
+
+qs-typings@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/qs-typings/-/qs-typings-0.0.7.tgz#0cbaa11e718a855ef900b4c31d46c67bafaf6d8b"
+  integrity sha512-n9kbvEO7GVAHdyZkHyaF/E1QQvUqky9H1+gQoY7JNFqqGRQ3IOL0LowD0i6N171FCDcFvSjdf8qWdVpg6ejLsw==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
