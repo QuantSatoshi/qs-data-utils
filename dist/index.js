@@ -19,3 +19,4 @@ __exportStar(require("./utils/instructionUtils"), exports);
 __exportStar(require("./utils/tfUtils"), exports);
 __exportStar(require("./utils/dataPathUtils"), exports);
 __exportStar(require("./utils/candleUtils"), exports);
+__exportStar(require("./utils/uniswapDataUtils"), exports);

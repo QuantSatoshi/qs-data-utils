@@ -24,7 +24,7 @@ function getDataFileName(channel, exchange, pairDb, startDate) {
     return outputFileName;
 }
 exports.getDataFileName = getDataFileName;
-const DEFAULT_DOWNLOAD_URL = "http://data.quantsatoshi.com/api/download-data";
+const DEFAULT_DOWNLOAD_URL = 'http://data.quantsatoshi.com/api/download-data';
 function attemptDownloadDataFile({ exchange, pair, startDate, channel, accessKey, dataFolder, }) {
     return __awaiter(this, void 0, void 0, function* () {
         const fileName = getDataFileName(channel, exchange, pair, startDate);
