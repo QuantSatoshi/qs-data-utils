@@ -2,11 +2,26 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.uniswapV3ArrToJson = exports.uniswapV3JsonToArr = void 0;
 function uniswapV3JsonToArr(results) {
-    return results.map(r => ([r.ts, r.high, r.low, r.close, r.feeToken0, r.feeToken1, r.tokens[0], r.tokens[1], r.feeV, r.feeUnb, r.amountV, r.amountTR, r.feeUSD, r.baseClose]));
+    return results.map((r) => [
+        r.ts,
+        r.high,
+        r.low,
+        r.close,
+        r.feeToken0,
+        r.feeToken1,
+        r.tokens[0],
+        r.tokens[1],
+        r.feeV,
+        r.feeUnb,
+        r.amountV,
+        r.amountTR,
+        r.feeUSD,
+        r.baseClose,
+    ]);
 }
 exports.uniswapV3JsonToArr = uniswapV3JsonToArr;
 function uniswapV3ArrToJson(arr) {
-    return arr.map(r => ({
+    return arr.map((r) => ({
         ts: r[0],
         high: r[1],
         low: r[2],
