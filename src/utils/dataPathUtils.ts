@@ -1,7 +1,7 @@
 import { getDay } from 'qs-js-utils';
 import fs from 'fs';
 import path from 'path';
-const mkdirp = require('mkdirp');
+import { mkdirp } from 'mkdirp';
 import axios from 'axios';
 
 export function getDataFileName(channel: string, exchange: string, pairDb: string, startDate: string | Date | number) {

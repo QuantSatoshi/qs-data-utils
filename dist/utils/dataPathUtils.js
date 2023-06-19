@@ -16,7 +16,7 @@ exports.attemptDownloadDataFile = exports.getDataFileName = void 0;
 const qs_js_utils_1 = require("qs-js-utils");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
-const mkdirp = require('mkdirp');
+const mkdirp_1 = require("mkdirp");
 const axios_1 = __importDefault(require("axios"));
 function getDataFileName(channel, exchange, pairDb, startDate) {
     const utcDate = (0, qs_js_utils_1.getDay)(startDate);
@@ -35,7 +35,7 @@ function attemptDownloadDataFile({ exchange, pair, startDate, channel, accessKey
         const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
         const url = `${BASE_DOWNLOAD_URL}/${fileName}`;
         const pathParsed = path_1.default.parse(outputFileFullPath);
-        mkdirp(pathParsed.dir);
+        (0, mkdirp_1.mkdirp)(pathParsed.dir);
         try {
             const response = yield (0, axios_1.default)({
                 url,
