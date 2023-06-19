@@ -32,7 +32,7 @@ export async function attemptDownloadDataFile({
   if (fs.existsSync(outputFileFullPath)) return fileName;
   console.log(`downloading file ${fileName}`);
   const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
-  const url = `${BASE_DOWNLOAD_URL}/${fileName}`;
+  const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${startDate}&accessKey=${accessKey}`;
   const pathParsed = path.parse(outputFileFullPath);
   mkdirp(pathParsed.dir);
 
