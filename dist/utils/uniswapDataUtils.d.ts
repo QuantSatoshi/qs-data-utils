@@ -14,4 +14,5 @@ export interface UniswapV3BacktestResult {
     baseClose: number;
 }
 export declare function uniswapV3JsonToArr(results: UniswapV3BacktestResult[]): number[][];
+export declare function uniswapV3RawToJson(r: number[]): UniswapV3BacktestResult;
 export declare function uniswapV3ArrToJson(arr: number[][]): UniswapV3BacktestResult[];

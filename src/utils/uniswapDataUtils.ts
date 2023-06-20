@@ -33,8 +33,8 @@ export function uniswapV3JsonToArr(results: UniswapV3BacktestResult[]): number[]
   ]);
 }
 
-export function uniswapV3ArrToJson(arr: number[][]): UniswapV3BacktestResult[] {
-  return arr.map((r) => ({
+export function uniswapV3RawToJson(r: number[]): UniswapV3BacktestResult {
+  return {
     ts: r[0],
     high: r[1],
     low: r[2],
@@ -48,5 +48,9 @@ export function uniswapV3ArrToJson(arr: number[][]): UniswapV3BacktestResult[] {
     amountTR: r[11],
     feeUSD: r[12],
     baseClose: r[13],
-  }));
+  };
+}
+
+export function uniswapV3ArrToJson(arr: number[][]): UniswapV3BacktestResult[] {
+  return arr.map(uniswapV3RawToJson);
 }
