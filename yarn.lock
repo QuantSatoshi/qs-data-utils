@@ -2048,10 +2048,10 @@ punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-qs-js-utils@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.15.tgz#fb564dcb7c354a1af656e935837de149a1c6547e"
-  integrity sha512-zT/bT6F22Ecx2XCEkW7OiqTVYrDxxE/agp4kVzTGPRtgElYHdKpViib3Y4oz18yblubRCp3VGaq/9kzSlW38iA==
+qs-js-utils@^0.0.36:
+  version "0.0.36"
+  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.36.tgz#030811a9391656e364c807a38fdbc45c617b6fcf"
+  integrity sha512-MmSCUc0msw2t86p1y7HCZHXjNuJTgSUcE7VpYGL5pV5okVy0WhmdvdugcUHUafBqcUwQ0J32RKE8GjQMl5UUTg==
   dependencies:
     byline "^5.0.0"
 
