@@ -28,12 +28,13 @@ const DEFAULT_DOWNLOAD_URL = 'http://data.quantsatoshi.com/api/download-data';
 function attemptDownloadDataFile({ exchange, pair, startDate, channel, accessKey, dataFolder, }) {
     return __awaiter(this, void 0, void 0, function* () {
         const fileName = getDataFileName(channel, exchange, pair, startDate);
+        const utcDate = (0, qs_js_utils_1.getDay)(startDate);
         const outputFileFullPath = `${dataFolder}/${fileName}`;
         if (fs_1.default.existsSync(outputFileFullPath))
             return fileName;
         console.log(`downloading file ${fileName}`);
         const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
-        const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${startDate}&accessKey=${accessKey}`;
+        const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${utcDate}&accessKey=${accessKey}`;
         const pathParsed = path_1.default.parse(outputFileFullPath);
         (0, mkdirp_1.mkdirp)(pathParsed.dir);
         try {
