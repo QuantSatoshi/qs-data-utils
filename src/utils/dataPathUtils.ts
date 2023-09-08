@@ -42,7 +42,7 @@ export async function attemptDownloadDataFile({
       url,
       method: 'GET',
       responseType: 'stream',
-      timeout: 300000,
+      timeout: 600000,
     });
     const writer = fs.createWriteStream(outputFileFullPath);
     return new Promise((resolve, reject) => {

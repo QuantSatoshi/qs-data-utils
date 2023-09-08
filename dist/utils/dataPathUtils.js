@@ -42,7 +42,7 @@ function attemptDownloadDataFile({ exchange, pair, startDate, channel, accessKey
                 url,
                 method: 'GET',
                 responseType: 'stream',
-                timeout: 300000,
+                timeout: 600000,
             });
             const writer = fs_1.default.createWriteStream(outputFileFullPath);
             return new Promise((resolve, reject) => {
