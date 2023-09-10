@@ -1,4 +1,4 @@
-import { Inst, OpCode } from 'qs-typings';
+import { InstFuture, OpCode } from 'qs-typings';
 
 // convert string op to number op code
 export function convertOpCode(str: string): OpCode {
@@ -26,7 +26,7 @@ export function convertOpCode(str: string): OpCode {
 
 // map instruction from string op to number op
 // input inst is similar structure as Inst.Instruction but with string op
-export function mapInstructionsToOpCode(inst: any[]): Inst.Instruction[] {
+export function mapInstructionsToOpCode(inst: any[]): InstFuture.Instruction[] {
   return inst.map((instruction) => {
     return {
       ...instruction,

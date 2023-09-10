@@ -2055,10 +2055,10 @@ qs-js-utils@^0.0.36:
   dependencies:
     byline "^5.0.0"
 
-qs-typings@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/qs-typings/-/qs-typings-0.0.7.tgz#0cbaa11e718a855ef900b4c31d46c67bafaf6d8b"
-  integrity sha512-n9kbvEO7GVAHdyZkHyaF/E1QQvUqky9H1+gQoY7JNFqqGRQ3IOL0LowD0i6N171FCDcFvSjdf8qWdVpg6ejLsw==
+qs-typings@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/qs-typings/-/qs-typings-0.2.2.tgz#ac7d347bed0ff82f0975752ac5adc36d26796884"
+  integrity sha512-bx0DRq0vW9jcTy7odlCWMzUu6O+qzlni2EAGIKfbEGY7jEixBNCcHhTZGkfI7ZaiuqlHcSoe7VEi3AXoXS02ug==
 
 queue-microtask@^1.2.2:
   version "1.2.3"

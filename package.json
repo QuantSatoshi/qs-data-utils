@@ -36,7 +36,7 @@
     "deep-equal": "^2.1.0",
     "mkdirp": "^3.0.1",
     "qs-js-utils": "^0.0.36",
-    "qs-typings": "^0.0.7"
+    "qs-typings": "^0.2.2"
   },
   "devDependencies": {
     "@ava/typescript": "^3.0.1",
