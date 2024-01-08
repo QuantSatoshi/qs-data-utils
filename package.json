@@ -1,6 +1,6 @@
 {
   "name": "qs-data-utils",
-  "version": "0.0.19",
+  "version": "0.0.21",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,17 +32,17 @@
     "mongodb": "4.x"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "deep-equal": "^2.1.0",
-    "mkdirp": "^3.0.1",
-    "qs-js-utils": "^0.0.36",
-    "qs-typings": "^0.2.2"
+    "axios": "1.4.0",
+    "deep-equal": "2.1.0",
+    "qs-js-utils": "0.0.42",
+    "qs-typings": "0.2.4"
   },
   "devDependencies": {
     "@ava/typescript": "^3.0.1",
     "@types/mongodb": "^4.0.7",
     "@types/node": "^18.11.9",
     "ava": "^5.0.1",
+    "mkdirp": "^3.0.1",
     "mongodb": "^4.11.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",

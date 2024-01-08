@@ -927,7 +927,7 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.4.0:
+axios@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
   integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
@@ -1170,7 +1170,7 @@ debug@^4.3.4:
   dependencies:
     ms "2.1.2"
 
-deep-equal@^2.1.0:
+deep-equal@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-2.1.0.tgz#5ba60402cf44ab92c2c07f3f3312c3d857a0e1dd"
   integrity sha512-2pxgvWu3Alv1PoWEyVg7HS8YhGlUFUV7N5oOvfL6d+7xAmLSemMwv/c8Zv/i9KFzxV5Kt5CAvQc70fLwVuf4UA==
@@ -2048,17 +2048,17 @@ punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-qs-js-utils@^0.0.36:
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.36.tgz#030811a9391656e364c807a38fdbc45c617b6fcf"
-  integrity sha512-MmSCUc0msw2t86p1y7HCZHXjNuJTgSUcE7VpYGL5pV5okVy0WhmdvdugcUHUafBqcUwQ0J32RKE8GjQMl5UUTg==
+qs-js-utils@0.0.42:
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.42.tgz#d4e436a699022aabed5c9e2b61659c7a5bd50f38"
+  integrity sha512-P0JZ8EN0XMhJogze/XVbP30NEsrg51+rVNLs6eF5RBchmXGQmB0wMD5aDe/YqVZdKn6BHx3K8EULVr56qi3pZg==
   dependencies:
     byline "^5.0.0"
 
-qs-typings@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/qs-typings/-/qs-typings-0.2.2.tgz#ac7d347bed0ff82f0975752ac5adc36d26796884"
-  integrity sha512-bx0DRq0vW9jcTy7odlCWMzUu6O+qzlni2EAGIKfbEGY7jEixBNCcHhTZGkfI7ZaiuqlHcSoe7VEi3AXoXS02ug==
+qs-typings@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/qs-typings/-/qs-typings-0.2.4.tgz#da28c2e1b6b39b2509f3a75f6e4e58501a3dfed3"
+  integrity sha512-uHeyGDZPNjqzDo574VHw9gf3sW2Dg9+doea76HlcqTbAUXIoTjEhRz/qEZNv0jsOR9O4qymNcHCiJGOEjcsN+Q==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
