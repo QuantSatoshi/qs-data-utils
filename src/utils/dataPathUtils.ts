@@ -35,7 +35,14 @@ export async function attemptDownloadDataFile({
   const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
   const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${utcDate}&accessKey=${accessKey}`;
   const pathParsed = path.parse(outputFileFullPath);
-  mkdirp(pathParsed.dir);
+  const stat = fs.statSync(pathParsed.dir);
+  if (!stat.isDirectory()) {
+    try {
+      mkdirp.mkdirpSync(pathParsed.dir);
+    } catch (e) {
+      console.log(`mkdirp failed error`, e);
+    }
+  }
 
   try {
     const response = await axios({

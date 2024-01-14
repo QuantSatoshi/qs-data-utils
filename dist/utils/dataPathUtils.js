@@ -36,7 +36,15 @@ function attemptDownloadDataFile({ exchange, pair, startDate, channel, accessKey
         const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
         const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${utcDate}&accessKey=${accessKey}`;
         const pathParsed = path_1.default.parse(outputFileFullPath);
-        (0, mkdirp_1.mkdirp)(pathParsed.dir);
+        const stat = fs_1.default.statSync(pathParsed.dir);
+        if (!stat.isDirectory()) {
+            try {
+                mkdirp_1.mkdirp.mkdirpSync(pathParsed.dir);
+            }
+            catch (e) {
+                console.log(`mkdirp failed error`, e);
+            }
+        }
         try {
             const response = yield (0, axios_1.default)({
                 url,
