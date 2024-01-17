@@ -12,7 +12,7 @@ export function getDataFileName(channel: string, exchange: string, pairDb: strin
 
 const DEFAULT_DOWNLOAD_URL = 'http://data.quantsatoshi.com/api/download-data';
 
-async function createFoldersRecursive(filePath: string) {
+export async function createFoldersRecursive(filePath: string) {
   return new Promise((resolve, reject) => {
     createFolders(filePath, resolve);
   });
@@ -27,6 +27,7 @@ function createFolders(filePath: string, callback: any) {
         if (innerError) {
           callback(innerError);
         } else {
+          console.log(`creating dir`, dirname);
           fs.mkdir(dirname, callback);
         }
       });

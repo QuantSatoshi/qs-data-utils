@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.attemptDownloadDataFile = exports.getDataFileName = void 0;
+exports.attemptDownloadDataFile = exports.createFoldersRecursive = exports.getDataFileName = void 0;
 const qs_js_utils_1 = require("qs-js-utils");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
@@ -32,6 +32,7 @@ function createFoldersRecursive(filePath) {
         });
     });
 }
+exports.createFoldersRecursive = createFoldersRecursive;
 function createFolders(filePath, callback) {
     const dirname = path_1.default.dirname(filePath);
     fs_1.default.access(dirname, (error) => {
@@ -42,6 +43,7 @@ function createFolders(filePath, callback) {
                     callback(innerError);
                 }
                 else {
+                    console.log(`creating dir`, dirname);
                     fs_1.default.mkdir(dirname, callback);
                 }
             });

@@ -1,4 +1,5 @@
 export declare function getDataFileName(channel: string, exchange: string, pairDb: string, startDate: string | Date | number): string;
+export declare function createFoldersRecursive(filePath: string): Promise<unknown>;
 export declare function attemptDownloadDataFile({ exchange, pair, startDate, channel, accessKey, dataFolder, }: {
     exchange: string;
     pair: string;

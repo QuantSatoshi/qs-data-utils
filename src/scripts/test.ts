@@ -1,3 +1,8 @@
 import { mkdirp } from 'mkdirp';
+import { createFoldersRecursive } from '../utils/dataPathUtils';
 
-console.log(`mkdirp`, mkdirp);
+export async function main() {
+  console.log(`createFoldersRecursive`);
+  await createFoldersRecursive(`./market-data/abc/def/aaa.gz`);
+}
+main();
