@@ -12,6 +12,30 @@ export function getDataFileName(channel: string, exchange: string, pairDb: strin
 
 const DEFAULT_DOWNLOAD_URL = 'http://data.quantsatoshi.com/api/download-data';
 
+async function createFoldersRecursive(filePath: string) {
+  return new Promise((resolve, reject) => {
+    createFolders(filePath, resolve);
+  });
+}
+
+function createFolders(filePath: string, callback: any) {
+  const dirname = path.dirname(filePath);
+  fs.access(dirname, (error) => {
+    if (error) {
+      // The directory doesn't exist, create it recursively
+      createFolders(dirname, (innerError: any) => {
+        if (innerError) {
+          callback(innerError);
+        } else {
+          fs.mkdir(dirname, callback);
+        }
+      });
+    } else {
+      callback();
+    }
+  });
+}
+
 export async function attemptDownloadDataFile({
   exchange,
   pair,
@@ -35,6 +59,7 @@ export async function attemptDownloadDataFile({
   const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
   const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${utcDate}&accessKey=${accessKey}`;
   const pathParsed = path.parse(outputFileFullPath);
+  await createFoldersRecursive(pathParsed.dir);
   const stat = fs.statSync(pathParsed.dir);
   if (!stat.isDirectory()) {
     try {
