@@ -56,9 +56,9 @@ export async function attemptDownloadDataFile({
   const utcDate = getDay(startDate);
   const outputFileFullPath = `${dataFolder}/${fileName}`;
   if (fs.existsSync(outputFileFullPath)) return fileName;
-  console.log(`downloading file ${fileName}`);
   const BASE_DOWNLOAD_URL = process.env.QS_DATA_DOWNLOAD_URL || DEFAULT_DOWNLOAD_URL;
   const url = `${BASE_DOWNLOAD_URL}?channel=${channel}&exchange=${exchange}&pair=${pair}&startDate=${utcDate}&accessKey=${accessKey}`;
+  console.log(`downloading file ${url.replace(accessKey, 'XXX')}`);
   const pathParsed = path.parse(outputFileFullPath);
   await createFoldersRecursive(outputFileFullPath);
   const stat = fs.statSync(pathParsed.dir);
